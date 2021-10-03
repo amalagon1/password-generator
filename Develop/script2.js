@@ -4,8 +4,9 @@ var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "
 console.log(upperCaseLetters)
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var specialCharacters = ["!", "@", "$", "%", "^", "&", "*"]
-
-
+var passwordArray = []
+var password = ""
+var generateBtn = document.querySelector("#generate")
 
 function getRandomPositionInArray(arrayLength) {
     var randomNumber = Math.random();
@@ -60,25 +61,32 @@ function generatePassword() {
     console.log(length)
     var wantLowerCase = window.confirm("Do you want lowercase letters?")
     if (wantLowerCase = true) {
-        generateRandomLowerCaseLetter(length)
+        passwordArray = passwordArray.concat(lowerCaseLetters)
     }
     var wantUpperCase = window.confirm("Do you want uppercase letters?")
     if (wantUpperCase = true) {
-        generateRandomUpperCaseLetter()
+        passwordArray = passwordArray.concat(upperCaseLetters)
     }
     var wantNumbers = window.confirm("Do you want numbers?")
     if (wantNumbers = true) {
-        generateRandomNumber()
+        passwordArray = passwordArray.concat(numbers)
     }
     var wantSpecialCharacters = window.confirm("Do you want special characters?")
     if (wantSpecialCharacters = true) {
-        generateSpecialChar()
+        passwordArray = passwordArray.concat(specialCharacters)
     }
+    console.log(passwordArray)
 
-    for (let i = 0; i < length; i++)
+    for (let i = 0; i < length; i++) {
+        var randomCharacterIndex = Math.floor(Math.random() * passwordArray.length)
+        password = password + passwordArray[randomCharacterIndex]
+    }
+    console.log(password)
+    document.querySelector("#password").innerHTML = password
 
 
 }
-generatePassword()
+generateBtn.addEventListener("click", generatePassword)
+
 
 

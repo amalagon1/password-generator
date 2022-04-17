@@ -8,8 +8,10 @@ html,
 body,
 .wrapper {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 10px;
+  color: red;
+  border: solid 2px;
 }
 
 body {

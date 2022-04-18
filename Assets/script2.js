@@ -1,9 +1,9 @@
-var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 console.log(lowerCaseLetters)
 var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 console.log(upperCaseLetters)
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var specialCharacters = ["!", "@", "$", "%", "^", "&", "*", "/", "^"]
+var specialCharacters = ["!", "@", "$", "%", "^", "&", "*", "/", "^", "#",]
 var passwordArray = []
 
 var generateBtn = document.querySelector("#generate")
@@ -48,7 +48,7 @@ function generateRandomLowerCaseLetter(length) {
 //     console.log(passwordArray.join())
 // }
 
-// function generateSpecialChar(passLength) {
+// function generateSpecialChar() {
 //     var passwordArray = []
 //     var randomPosition = getRandomPositionInArray(specialCharacters.length);
 //     var randomNumber = specialCharacters[randomPosition]

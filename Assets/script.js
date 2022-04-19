@@ -3,32 +3,33 @@ console.log(lowerCaseLetters)
 var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 console.log(upperCaseLetters)
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var specialCharacters = ["!", "@", "$", "%", "^", "&", "*", "/", "^", "#",]
+var specialCharacters = ["!", "@", "$", "%", "^", "&", "*", "/", "^", "#", "(", ")"]
 var passwordArray = []
 
-var generateBtn = document.querySelector("#generate")
-var passwordEl = document.querySelector("#password")
+var copyBtn = document.getElementById("copy");
+var generateBtn = document.querySelector("#generate");
+var passwordEl = document.querySelector("#password");
 
-function getRandomPositionInArray(arrayLength) {
-    var randomNumber = Math.random();
-    var randomValue = randomNumber * arrayLength;
-    return Math.floor(randomValue);
+// function getRandomPositionInArray(arrayLength) {
+//     var randomNumber = Math.random();
+//     var randomValue = randomNumber * arrayLength;
+//     return Math.floor(randomValue);
 
-}
+// }
 
-function generateRandomLowerCaseLetter(length) {
-    var passwordArray = []
-
-
-    var randomPosition = getRandomPositionInArray(lowerCaseLetters.length);
-    var randomLetter = lowerCaseLetters[randomPosition]
-    passwordArray.push(randomLetter);
+// function generateRandomLowerCaseLetter(length) {
+//     var passwordArray = []
 
 
-    console.log(passwordArray.join(""))
+//     var randomPosition = getRandomPositionInArray(lowerCaseLetters.length);
+//     var randomLetter = lowerCaseLetters[randomPosition]
+//     passwordArray.push(randomLetter);
 
 
-}
+//     console.log(passwordArray.join(""))
+
+
+// }
 
 // function generateRandomUpperCaseLetter(passLength) {
 //     var passwordArray = []
@@ -95,7 +96,15 @@ function generatePassword() {
 
 
 }
+
+
 generateBtn.addEventListener("click", generatePassword)
+
+copyBtn.onclick = function () {
+    passwordEl.select();
+    document.execCommand('Copy');
+}
+
 
 
 

@@ -74,6 +74,14 @@ header {
   clear: both;
 }
 
+.copyBtn{
+  color: white;
+  background-color: blueviolet;
+  width: 50%;
+  border-radius: 25px;
+  cursor:pointer;
+}
+
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
